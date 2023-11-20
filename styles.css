@@ -160,9 +160,9 @@ header{
     -moz-box-shadow:inset 0 1px 0 #573379, 0 10px 0 #1f0736;
     box-shadow:inset 0 1px 0 #573379, 0 10px 0 #1f0736;
     
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
   }
   
   .button a:active{
@@ -184,9 +184,9 @@ header{
     left:-4px;
     z-index:-1;
     background-color:#ffffff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
   }
  
   .inputGroup {
