@@ -18,7 +18,7 @@ function updateScore() {
 function checkReset() {
   if (Math.random() < chanceReset || score === 100) {
     playerNameInputs.forEach(input => {
-      const playerName = input.value || "Jogador";
+      const playerName = input.value || "Estudante";
       const currentScore = score; // Salva a pontuação atual antes de resetar
       
       // Adiciona a jogada atual ao array de jogadores e pontuações
@@ -29,7 +29,7 @@ function checkReset() {
 
       // Limpa a tabela antes de recriá-la e adiciona o cabeçalho fixo
       scoreTables.forEach(table => {
-        table.innerHTML = `<tr><th>Nome</th><th>Pontuação</th></tr>`;
+        table.innerHTML = `<tr></tr>`;
         
         // Atualiza a tabela com os dados ordenados
         playerScores.forEach(player => {
@@ -47,7 +47,7 @@ function checkReset() {
     console.log('Pontuação resetada!');
   } else {
     // Aumenta a chance de resetar em 1%
-    chanceReset += 0.01;
+    chanceReset += 0.005;
   }
 }
 

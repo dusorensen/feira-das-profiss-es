@@ -18,7 +18,8 @@
   <header>
     <img class="logo-erico" src="./assets/logo erico.png">
     <h1 class="erico-verissimo">Desenvolvimento de Software</h1>
-    <a href="https://www.instagram.com/ericoverissimo3passos/" target="_blank"><img src="./assets/logo_instagram.png" alt="instagram-logo"  class="logo-insta"> </img></a>
+    <a href="https://www.instagram.com/ericoverissimo3passos/" target="_blank"><img src="./assets/logo_instagram.png"
+        alt="instagram-logo" class="logo-insta"> </img></a>
   </header>
 
   <div class="main">
@@ -30,24 +31,29 @@
         <label for="playerName">Nome</label>
       </div>
 
-      <p><strong>Pontuação:</strong></p>
-      <p class="score">0</p>
-      <div ontouchstart="">
+      <p class="clique">Clique no botão!</p>
+
+      <div>
         <div class="button">
-          <a href="#">Clique!</a>
+          <a class="score" href="#">0</a>
         </div>
+      </div>
+      <div class="como-jogar">
+        <p>O jogo é um contador de pontos simples onde cada clique no botão aumenta a pontuação do estudante. A cada ponto ganho, a chance de resetar os pontos também aumenta em 1%. O objetivo é acumular a maior pontuação possível antes de um possível reset.</p>
       </div>
     </div>
 
 
     <div class="container-right">
-      <table class="scoreTable">
-        <h2 class="pontuação">Placar</h2>
-        <tr class="tabela">
-          <th>Nome</th>
-          <th>Pontuação</th>
-        </tr>
-      </table>
+      <h2 class="pontuação">Placar</h2>
+      <div class="name-pont">
+        <p class="name">Nome</p>
+        <p class="pont">Pontuação</p>
+      </div>
+      <div class="table-div">
+        <table class="scoreTable">
+        </table>
+      </div>
     </div>
   </div>
 

@@ -3,18 +3,18 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
-  overflow: ;
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+  width: 0px;
 }
 
 body {
+  overflow: hidden;
   height: 100vh;
   width: 100%;
   background-image: url(./assets/erico.png);
-    background-size: cover;
+  background-size: cover;
 
 }
 
@@ -24,7 +24,8 @@ header{
     align-items: center;
     width: 100%;
     height: 120px;
-    background: linear-gradient(to right, black, rgb(36, 36, 36));
+    background: rgba(0, 0, 0, 0.151);
+    backdrop-filter: blur(10px);
     background-size: 500% 100%;
     animation: degrade 10s infinite;
     position: fixed;
@@ -49,7 +50,6 @@ header{
     padding: 200px 20px;
     padding-bottom: 50px;
     margin: 0 auto;
-    max-height: 60%;
   }
 
   .container-left {
@@ -59,12 +59,11 @@ header{
     display: flex;  
     align-items: center;
     flex-direction: column;
-    width: 40vw;
-    height: 100vh;
+    width: 45vw;
+    height: 800px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     max-height: 5000px;
-
     color: #ffffff
   }
 
@@ -74,17 +73,17 @@ header{
   
 }
   .container-right {
-    width: 40vw;
-    height: 100vh;
-    max-height: 100%;
+    width: 45vw;
+    max-height: 800px;
     margin: 0 auto;
     display: flex;    
     align-items: center;
     flex-direction: column;
     background:  rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-
     color: #ffffff;
+    overflow: hidden;
+    padding-bottom: 30px;
   }
 
 
@@ -113,23 +112,23 @@ header{
   font-size: 40px;
   color: #ffffff;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
+  .table-div {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+  }
 
   table {
     border-collapse: collapse;
-    width: 200px;
+    width: 100%;
   }
 
   th, td {
     border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .button{
-    position:relative;
-    display:inline-block;
-    margin:20px;
+    padding-bottom: 10px;
+    width: 50%;
   }
 
   .logo-erico {
@@ -137,11 +136,19 @@ header{
   }
 
   .logo-insta {
-    width: 70px;
+    width: 60px;
   }
-  
-  .button a{
-    color:white;
+
+  .button {
+    position:relative;
+    display:inline-block;
+    margin-bottom:40px;
+    margin-top: 20px;
+  }
+
+  .button a {
+    width: 120px;
+    color:#aa8ac9;
     font-family:Helvetica, sans-serif;
     font-weight:bold;
     font-size:36px;
@@ -150,7 +157,7 @@ header{
     background-color:#430f74;
     display:block;
     position:relative;
-    padding:20px 40px;
+    padding:35px 0px;
     
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px #000;
@@ -202,14 +209,15 @@ header{
     font-size: 70%;
     padding: 0.8em;
     outline: none;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.301);
+    background-color: black;
     border-radius: 20px;
     width: 100%;
     color: white;
   }
   
   .inputGroup label {
+    font-weight: 700;
     font-size: 70%;
     position: absolute;
     left: 0;
@@ -234,7 +242,8 @@ header{
 
   .scoreTable {
     width: 80%;
-    margin: 50px auto;
+    max-height: 400px;
+    margin: 20px auto;
   }
 
   .scoreTable th, td, tr {
@@ -246,4 +255,32 @@ header{
     font-weight: 300;
   }
 
- 
+  td {
+    text-align: center !important;
+  }
+  .name-pont{
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-evenly;
+  }
+
+.como-jogar {
+  margin-top: 70px;
+  width: 70%;
+}
+.como-jogar p {
+  line-height: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.568);
+}
+
+.clique p{
+  color: rgba(255, 255, 255, 0.568);
+  font-weight: 700;
+}
