@@ -10,277 +10,321 @@
 }
 
 body {
-  overflow: hidden;
   height: 100vh;
   width: 100%;
   background-image: url(./assets/erico.png);
   background-size: cover;
-
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-    background: rgba(0, 0, 0, 0.151);
-    backdrop-filter: blur(10px);
-    background-size: 500% 100%;
-    animation: degrade 10s infinite;
-    position: fixed;
-    padding: 0 30px;
-    z-index: 10;
-    animation-direction: alternate-reverse;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.151);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  padding: 0 30px;
+  z-index: 10;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.103);
+  gap: 25px;
 }
 
-@keyframes degrade {
-    0% {
-        background-position-x: 0%;
-    }
-
-    100% {
-        background-position-x: 100%;
-    }
+.logo-erico {
+  width: 50px;
 }
-
-.main {
-    display: flex;
-    width: 100%;
-    padding: 200px 20px;
-    padding-bottom: 50px;
-    margin: 0 auto;
-  }
-
-  .container-left {
-    font-size: 24px;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;  
-    align-items: center;
-    flex-direction: column;
-    width: 45vw;
-    height: 800px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    max-height: 5000px;
-    color: #ffffff
-  }
-
-.container-left p {
-  font-weight: 300;
-  font-size: 24px;
-  
+.logo-insta img {
+  width: 45px;
 }
-  .container-right {
-    width: 45vw;
-    max-height: 800px;
-    margin: 0 auto;
-    display: flex;    
-    align-items: center;
-    flex-direction: column;
-    background:  rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    color: #ffffff;
-    overflow: hidden;
-    padding-bottom: 30px;
-  }
-
-
-  .erico-verissimo {
-    font-family: 'Inconsolata', monospace;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 50px;
-    color: white;
-  }
-
-  .jogodasorte {
-    font-style: normal;
-    font-size: 40px;
-    margin-top: 50px;
-  }
- 
-  .score {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-.pontuação {
+.logo-insta {
+  transition: 0.4s all;
+}
+.logo-insta:hover {
+  scale: 110%;
+}
+.erico-verissimo {
+  font-family: 'Inconsolata', monospace;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 40px;
+  color: white;
+}
+.main {
+  padding: 120px 40px 40px 40px;
+  display: flex;
+  gap: 40px;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100vh;
+}
+.animacao {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/codigo_binario.png');
+  background-repeat: repeat;
+  background-size: 100vh;
+  animation: codigo 200s linear infinite;
+  z-index: 1;
+  opacity: 0.3;
+}
+@keyframes codigo {
+  0% {
+    background-position-y: -2000%;
+  }
+  100% {
+    background-position-y: 2000%;
+  }
+}
+.main > div {
+  z-index: 5;
+  width: calc((100% / 2) - 20px);
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.555);
   color: #ffffff;
-  margin-top: 50px;
+  border-radius: 15px;
+  padding: 40px;
+  overflow: hidden;
+}
+.container-left {
+  justify-content: space-evenly !important;
+}
+.container-left > div {
+  flex: 1;
+}
+.container-left > div:nth-of-type(2) {
+  flex: 1 1;
+  height: 120px;
+}
+.jogodasorte, .placar h1 {
+  text-align: center;
+  font-size: 40px;
+}
+.placar {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+.placar > div {
+  width: 100%;
+  padding: 0 0 0 15px;
+  font-size: 22px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.placar > div p {
+  width: 50%;
+}
+.placar > div p:nth-of-type(2) {
+  text-align: center;
+}
+.table-div {
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td {
+  padding: 10px 15px;
+  width: 50%;
+}
+td:nth-of-type(2) {
+  text-align: center;
+}
+tbody {
+  border-bottom: 2px solid rgba(248, 246, 246, 0.288);
+}
+tbody:first-of-type {
+  border: none;
+}
+.button {
+  position: relative;
+  display: inline-block;
   margin-bottom: 20px;
 }
-  .table-div {
-    overflow: hidden;
-    overflow-y: auto;
-    width: 100%;
-  }
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+.button a {
+  width: 120px;
+  color: #aa8ac9;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #430f74;
+  display: block;
+  position: relative;
+  padding: 35px 0px;
 
-  th, td {
-    border: 1px solid black;
-    padding-bottom: 10px;
-    width: 50%;
-  }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
 
-  .logo-erico {
-    width: 75px;
-  }
+  -webkit-box-shadow: inset 0 1px 0 #573379, 0 10px 0 #1f0736;
+  -moz-box-shadow: inset 0 1px 0 #573379, 0 10px 0 #1f0736;
+  box-shadow: inset 0 1px 0 #573379, 0 10px 0 #1f0736;
 
-  .logo-insta {
-    width: 60px;
-  }
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
 
-  .button {
-    position:relative;
-    display:inline-block;
-    margin-bottom:40px;
-    margin-top: 20px;
-  }
+.button a:active {
+  top: 10px;
+  background-color: #430f74;
 
-  .button a {
-    width: 120px;
-    color:#aa8ac9;
-    font-family:Helvetica, sans-serif;
-    font-weight:bold;
-    font-size:36px;
-    text-align: center;
-    text-decoration:none;
-    background-color:#430f74;
-    display:block;
-    position:relative;
-    padding:35px 0px;
-    
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    text-shadow: 0px 1px 0px #000;
-    filter: dropshadow(color=#000, offx=0px, offy=1px);
-    
-    -webkit-box-shadow:inset 0 1px 0 #573379, 0 10px 0 #1f0736;
-    -moz-box-shadow:inset 0 1px 0 #573379, 0 10px 0 #1f0736;
-    box-shadow:inset 0 1px 0 #573379, 0 10px 0 #1f0736;
-    
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-  }
-  
-  .button a:active{
-    top:10px;
-    background-color:#430f74;
-    
-    -webkit-box-shadow:inset 0 1px 0 #573379, inset 0 -3px 0 #1f0736;
-    -moz-box-shadow:inset 0 1px 0 #573379, inset 0 -3pxpx 0 #1f0736;
-    box-shadow:inset 0 1px 0 #573379, inset 0 -3px 0 #1f0736;
-  }
-  
-  .button:after{
-    content:"";
-    height:100%;
-    width:100%;
-    padding:4px;
-    position: absolute;
-    bottom:-15px;
-    left:-4px;
-    z-index:-1;
-    background-color:#ffffff;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-  }
- 
-  .inputGroup {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 1em 0 1em 0;
-    max-width: 1090px;
-    position: relative;
-    margin: 40px;
-    color: white;
-  }
-  
-  .inputGroup input {
-    font-size: 70%;
-    padding: 0.8em;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, 0.301);
-    background-color: black;
-    border-radius: 20px;
-    width: 100%;
-    color: white;
-  }
-  
-  .inputGroup label {
-    font-weight: 700;
-    font-size: 70%;
-    position: absolute;
-    left: 0;
-    padding: 0.8em;
-    margin-left: 0.5em;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    color: rgb(100, 100, 100);
-  }
-  
-  .inputGroup :is(input:focus, input:valid)~label {
-    transform: translateY(-80%) scale(.9);
-    margin: 0em;
-    margin-left: 1.3em;
-    padding: 0.6em;
-    background-color: transparent;
-  }
-  
-  .inputGroup :is(input:focus, input:valid) {
-    border-color: #8a4cc4;
-  }
+  -webkit-box-shadow: inset 0 1px 0 #573379, inset 0 -3px 0 #1f0736;
+  -moz-box-shadow: inset 0 1px 0 #573379, inset 0 -3pxpx 0 #1f0736;
+  box-shadow: inset 0 1px 0 #573379, inset 0 -3px 0 #1f0736;
+}
 
-  .scoreTable {
-    width: 80%;
-    max-height: 400px;
-    margin: 20px auto;
-  }
+.button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #ffffff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
 
-  .scoreTable th, td, tr {
-    font-size: 24px;
-    border: none;
-  }
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 30px 0 0 0;
+  position: relative;
+  color: white;
+}
 
-  .scoreTable td, tr {
-    font-weight: 300;
-  }
+.inputGroup input {
+  font-size: 70%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.301);
+  background-color: black;
+  border-radius: 20px;
+  width: 100%;
+  color: white;
+}
 
-  td {
-    text-align: center !important;
-  }
-  .name-pont{
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 24px;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    justify-content: space-evenly;
-  }
+.inputGroup label {
+  font-weight: 700;
+  font-size: 80%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
 
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateY(-80%);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.6em;
+  background-color: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: #8a4cc4;
+}
 .como-jogar {
-  margin-top: 70px;
-  width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+.como-jogar h3 {
+  font-size: 22px;
 }
 .como-jogar p {
-  line-height: 30px;
-  text-align: center;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.568);
 }
-
-.clique p{
-  color: rgba(255, 255, 255, 0.568);
-  font-weight: 700;
+@media (max-width: 1000px) {
+  body, .main {
+    height: auto;
+  }
+  .main {
+    flex-flow: column nowrap;
+  }
+  .main > div {
+    width: 100%;
+  }
+  .animacao {
+    height: 100%;
+    background-size: 100%;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    padding: 0 15px;
+  }
+  .main {
+    padding: 100px 20px 20px 20px;
+  }
+  .main > div {
+    padding: 20px
+  }
+  .main > div h1 {
+    font-size: 26px;
+  }
+  .erico-verissimo {
+    font-size: 22px;
+    text-align: center;
+  }
+  .logo-erico {
+    width: 30px;
+  }
+  .logo-insta img {
+    width: 27px;
+  }
+  .como-jogar h3 {
+    font-size: 18px;
+  }
+  .como-jogar {
+    gap: 10px;
+  }
+  .como-jogar p {
+    font-size: 14px;
+  }
+  .container-right {
+    max-height: 500px;
+  }
+}
+@media (max-width: 530px) {
+  .placar > div p:nth-of-type(2), td:nth-of-type(2) {
+    text-align: right;
+  }
+  .placar > div {
+    font-size: 18px;
+    padding: 0 0 0 5px
+  }
+  td {
+    padding: 5px;
+    font-size: 14px;
+  }
 }

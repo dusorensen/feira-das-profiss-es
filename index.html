@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,44 +10,47 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;800&display=swap" rel="stylesheet">
-  <title>Jogo de Pontuação</title>
+  <link rel="icon" href="./assets/logo erico.png">
+  <title>Jogo da Sorte</title>
 </head>
-
 <body>
+  <div class="animacao"></div>
   <header>
     <img class="logo-erico" src="./assets/logo erico.png">
     <h1 class="erico-verissimo">Desenvolvimento de Software</h1>
-    <a href="https://www.instagram.com/ericoverissimo3passos/" target="_blank"><img src="./assets/logo_instagram.png"
-        alt="instagram-logo" class="logo-insta"> </img></a>
+    <a class="logo-insta" href="https://www.instagram.com/ericoverissimo3passos/" target="_blank">
+      <img src="./assets/logo_instagram.png" alt="instagram-logo"> </img>
+    </a>
   </header>
 
   <div class="main">
     <div class="container-left">
-      <h1 class="jogodasorte">Jogo da Sorte</h1>
-
-      <div class="inputGroup">
-        <input id="playerName" type="text" required="" autocomplete="off">
-        <label for="playerName">Nome</label>
+      <div>
+        <h1 class="jogodasorte">Jogo da Sorte</h1>
+        <div class="inputGroup">
+          <input id="playerName" type="text" required="" autocomplete="off" maxlength="25">
+          <label for="playerName">Nome</label>
+        </div>
       </div>
-
-      <p class="clique">Clique no botão!</p>
-
       <div>
         <div class="button">
           <a class="score" href="#">0</a>
         </div>
       </div>
       <div class="como-jogar">
-        <p>O jogo é um contador de pontos simples onde cada clique no botão aumenta a pontuação do estudante. A cada ponto ganho, a chance de resetar os pontos também aumenta em 1%. O objetivo é acumular a maior pontuação possível antes de um possível reset.</p>
+        <h3>Clique no botão!</h3>
+        <p>
+          O jogo é um contador de pontos simples onde cada clique no botão aumenta a pontuação do estudante. A cada ponto ganho, a chance de resetar os pontos também aumenta em 1%. O objetivo é acumular a maior pontuação possível antes de um possível reset.
+        </p>
       </div>
     </div>
-
-
     <div class="container-right">
-      <h2 class="pontuação">Placar</h2>
-      <div class="name-pont">
-        <p class="name">Nome</p>
-        <p class="pont">Pontuação</p>
+      <div class="placar">
+        <h1>Placar</h1>
+        <div>
+          <p>Nome</p>
+          <p>Pontuação</p>
+        </div>
       </div>
       <div class="table-div">
         <table class="scoreTable">
