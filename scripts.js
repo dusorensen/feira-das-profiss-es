@@ -47,7 +47,7 @@ function checkReset() {
     console.log('Pontuação resetada!');
   } else {
     // Aumenta a chance de resetar em 1%
-    chanceReset += 0.005;
+    chanceReset += 0.01;
   }
 }
 
