@@ -265,7 +265,7 @@ tbody:first-of-type {
   color: rgba(255, 255, 255, 0.568);
 }
 @media (max-width: 1000px) {
-  body, .main {
+  .main {
     height: auto;
   }
   .main {
